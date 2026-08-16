@@ -62,13 +62,13 @@
               <div class="card-heading"><span>04</span><h2>普惠</h2></div>
               <p class="group-label">新增</p>
               <div class="input-grid three-columns">
-                <label>总新增金额（万）<input data-field="inclusiveNewTotal" type="number" inputmode="decimal" step="any" value="0" /></label>
+                <label>总新增金额（万）<input id="inclusiveNewTotal" type="text" value="0" readonly aria-label="总新增金额，自动合计" /></label>
                 <label>公司金额（万）<input data-field="inclusiveNewCompany" type="number" inputmode="decimal" step="any" value="0" /></label>
                 <label>个人金额（万）<input data-field="inclusiveNewPersonal" type="number" inputmode="decimal" step="any" value="0" /></label>
               </div>
               <p class="group-label">客户</p>
               <div class="input-grid three-columns">
-                <label>客户总数（户）<input data-field="inclusiveCustomersTotal" type="number" inputmode="numeric" step="1" value="0" /></label>
+                <label>客户总数（户）<input id="inclusiveCustomersTotal" type="text" value="0" readonly aria-label="客户总数，自动合计" /></label>
                 <label>公司客户（户）<input data-field="inclusiveCustomersCompany" type="number" inputmode="numeric" step="1" value="0" /></label>
                 <label>个人客户（户）<input data-field="inclusiveCustomersPersonal" type="number" inputmode="numeric" step="1" value="0" /></label>
               </div>
