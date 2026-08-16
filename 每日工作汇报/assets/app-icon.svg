@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">每日经营汇报</title>
+  <desc id="desc">蓝色圆角方形中的白色报表和上升趋势线</desc>
+  <rect width="512" height="512" rx="112" fill="#12324b"/>
+  <circle cx="404" cy="108" r="78" fill="#1876b9" opacity=".72"/>
+  <path d="M142 91h176l68 68v262H142c-31 0-56-25-56-56V147c0-31 25-56 56-56Z" fill="#fff"/>
+  <path d="M318 91v68h68" fill="#d9eefb"/>
+  <rect x="133" y="183" width="151" height="20" rx="10" fill="#c7dce8"/>
+  <rect x="133" y="224" width="104" height="16" rx="8" fill="#dbe8ef"/>
+  <rect x="133" y="263" width="28" height="77" rx="10" fill="#78bce7"/>
+  <rect x="179" y="236" width="28" height="104" rx="10" fill="#3795d2"/>
+  <rect x="225" y="205" width="28" height="135" rx="10" fill="#1876b9"/>
+  <path d="m146 374 63-62 49 29 73-86" fill="none" stroke="#12324b" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+  <path d="m293 254 45-8-5 46" fill="none" stroke="#12324b" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+</svg>

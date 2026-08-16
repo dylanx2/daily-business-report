@@ -1,0 +1,41 @@
+:root { --navy: #12324b; --blue: #1876b9; --light-blue: #eaf4fb; --line: #dbe5ec; --ink: #1d2b36; --muted: #71808b; --surface: #fff; --canvas: #f4f7f9; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+.app-shell { max-width: 1500px; margin: 0 auto; padding: 36px 28px 48px; }
+.app-header, .preview-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.app-header { margin-bottom: 28px; }
+.eyebrow { margin: 0 0 7px; color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 8px; font-size: clamp(25px, 3vw, 34px); letter-spacing: -.03em; }
+h2 { margin-bottom: 0; font-size: 18px; }
+.subtitle { margin-bottom: 0; color: var(--muted); }
+.workspace { display: grid; grid-template-columns: minmax(0, 1.36fr) minmax(340px, .84fr); gap: 24px; align-items: start; }
+.form-panel { display: grid; gap: 18px; }
+#reportForm { display: grid; gap: 18px; }
+.form-card, .preview-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 5px 18px rgba(28, 55, 74, .045); }
+.form-card { padding: 22px; }
+.card-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.card-heading span { display: inline-grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: var(--light-blue); color: var(--blue); font-size: 11px; font-weight: 800; }
+.input-grid { display: grid; gap: 14px; }
+.two-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.three-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+label { display: grid; gap: 7px; color: #52616d; font-size: 13px; font-weight: 650; }
+input, textarea { width: 100%; border: 1px solid #cad8e1; border-radius: 8px; padding: 10px 11px; background: #fff; color: var(--ink); font: inherit; font-size: 15px; font-weight: 500; outline: none; transition: border-color .18s, box-shadow .18s; }
+textarea { resize: vertical; line-height: 1.55; }
+input:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(24,118,185,.12); }
+.group-label { margin: 19px 0 9px; color: var(--blue); font-size: 12px; font-weight: 800; }
+.calculation { margin: 15px 0 0; padding: 11px 12px; border-radius: 7px; background: #f6fafc; color: #5b6b76; font-size: 13px; }
+.calculation strong { color: var(--blue); font-size: 16px; }
+.preview-panel { position: sticky; top: 18px; padding: 24px; }
+.save-status { padding: 5px 8px; border-radius: 999px; background: #edf8f0; color: #33814b; font-size: 12px; white-space: nowrap; }
+.report-preview { min-height: 425px; margin: 22px 0; padding: 20px; overflow: auto; border: 1px solid #dce6eb; border-radius: 9px; background: #fbfdfe; color: #263843; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.95; white-space: pre-wrap; }
+.action-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.button { min-height: 42px; border: 1px solid transparent; border-radius: 8px; padding: 10px 16px; cursor: pointer; font: inherit; font-weight: 750; transition: transform .16s, opacity .16s, background .16s; }
+.button:hover { transform: translateY(-1px); }
+.button-primary { background: var(--blue); color: #fff; }
+.button-dark { background: var(--navy); color: #fff; }
+.button-outline, .button-secondary { border-color: #cbd8df; background: #fff; color: #3d5667; }
+.button-outline { grid-column: 1 / -1; }
+.action-message { min-height: 20px; margin: 13px 0 0; color: #33814b; font-size: 13px; text-align: center; }
+@media (max-width: 980px) { .workspace { grid-template-columns: 1fr; gap: 18px; } .preview-panel { position: static; } .report-preview { min-height: 260px; } }
+@media (max-width: 600px) { .app-shell { padding: 20px 14px 32px; }.app-header { align-items: stretch; flex-direction: column; margin-bottom: 20px; }.app-header h1 { font-size: 26px; }.app-header .button { width: 100%; }.workspace, #reportForm { gap: 10px; }.two-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }.three-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }.form-card, .preview-panel { padding: 15px 14px; border-radius: 12px; }.form-card.is-collapsible { padding-top: 13px; padding-bottom: 13px; }.form-card.is-collapsible:not(.is-open) > :not(.card-heading) { display: none; }.card-heading { margin-bottom: 14px; }.form-card.is-collapsible:not(.is-open) .card-heading { margin-bottom: 0; }.form-card.is-collapsible .card-heading { cursor: pointer; user-select: none; }.form-card.is-collapsible .card-heading::after { content: '收起'; margin-left: auto; color: var(--blue); font-size: 12px; font-weight: 800; }.form-card.is-collapsible:not(.is-open) .card-heading::after { content: '填写'; color: #71808b; }.input-grid { gap: 10px; }label { gap: 5px; font-size: 12px; }input, textarea { min-height: 46px; padding: 10px; font-size: 16px; }textarea { min-height: 96px; }.group-label { margin: 14px 0 7px; }.calculation { margin-top: 11px; }.preview-head { align-items: center; }.preview-head h2 { font-size: 20px; }.report-preview { min-height: 215px; margin: 16px 0; padding: 15px; font-size: 14px; line-height: 1.8; }.action-buttons { grid-template-columns: 1fr; gap: 9px; }.button { min-height: 50px; font-size: 16px; }.button-outline { grid-column: auto; }.action-message { margin-top: 11px; } }
